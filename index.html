@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djursland Byggeteknik | Autoriseret Kloakmester & Bygningskonstruktør i Knebel</title>
+    <meta name="description" content="Djursland Byggeteknik - Din lokale entreprenør og autoriseret kloakmester i Knebel. Vi udfører kloakarbejde, byggeri og anlægsarbejde på hele Djursland. Ring 61 70 27 67.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        'accent': {
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+        }
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-slide-up {
+            animation: slideInUp 0.8s ease-out;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .image-hover {
+            transition: all 0.4s ease;
+        }
+        .image-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-[9999] border-b-4 border-primary-600">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 12L12 2L2 12H4V20H20V12H22M12 5L18 11V18H6V11L12 5M8 14H10V17H8V14M12 14H14V17H12V14M16 14V17H14V14H16Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-black">Djursland Byggeteknik</h1>
+                        <p class="text-xs text-gray-600">Aut. Kloakmester & Bygningskonstruktør</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hjem" class="text-black hover:text-primary-600 font-medium transition-colors">Hjem</a>
+                    <a href="#services" class="text-black hover:text-primary-600 font-medium transition-colors">Services</a>
+                    <a href="#projekter" class="text-black hover:text-primary-600 font-medium transition-colors">Projekter</a>
+                    <a href="#om-os" class="text-black hover:text-primary-600 font-medium transition-colors">Om Os</a>
+                    <a href="#kontakt" class="text-black hover:text-primary-600 font-medium transition-colors">Kontakt</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-black">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hjem" class="pt-20 hero-gradient text-white min-h-screen flex items-center relative overflow-hidden z-0">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-primary-300 rounded-full opacity-20 blur-3xl float-animation"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-accent-500 rounded-full opacity-20 blur-3xl float-animation" style="animation-delay: 3s;"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <span class="inline-block bg-white text-primary-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        ✓ Autoriseret & Forsikret
+                    </span>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        Professionel <span class="text-accent-500">Byggeteknik</span> på Djursland
+                    </h1>
+                    <p class="text-xl text-primary-50 mb-8 leading-relaxed">
+                        Autoriseret kloakmester og bygningskonstruktør i Knebel. Vi udfører alt inden for kloakarbejde, byggeri og entreprenørarbejde med høj kvalitet og garanti.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:61702767" class="bg-white text-black hover:bg-primary-50 px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-xl text-center flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                            </svg>
+                            <span>Ring 61 70 27 67</span>
+                        </a>
+                        <a href="#kontakt" class="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-bold transition-all duration-300 text-center">
+                            Få Et Tilbud
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-2xl p-6 shadow-2xl animate-slide-up" style="animation-delay: 0.1s;">
+                            <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2L2 7V10C2 16 6 21.5 12 23C18 21.5 22 16 22 10V7L12 2M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-black text-lg mb-2">Autoriseret</h3>
+                            <p class="text-gray-600">Autoriseret kloakmester</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-2xl animate-slide-up" style="animation-delay: 0.2s;">
+                            <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2L13.09 4.91L16 4L15.09 6.91L18 8L15.09 9.09L16 12L13.09 11.09L12 14L10.91 11.09L8 12L8.91 9.09L6 8L8.91 6.91L8 4L10.91 4.91L12 2Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-black text-lg mb-2">100%</h3>
+                            <p class="text-gray-600">Anbefalinger på Facebook</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-2xl animate-slide-up" style="animation-delay: 0.3s;">
+                            <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2M12 11.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-black text-lg mb-2">Lokal</h3>
+                            <p class="text-gray-600">Knebel & Djursland</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-2xl animate-slide-up" style="animation-delay: 0.4s;">
+                            <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M12 7C13.4 7 14.8 8.1 14.8 9.5V11C15.4 11 16 11.6 16 12.3V15.8C16 16.4 15.4 17 14.7 17H9.2C8.6 17 8 16.4 8 15.7V12.2C8 11.6 8.6 11 9.2 11V9.5C9.2 8.1 10.6 7 12 7M12 8.2C11.2 8.2 10.5 8.7 10.5 9.5V11H13.5V9.5C13.5 8.7 12.8 8.2 12 8.2Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-black text-lg mb-2">Garanti</h3>
+                            <p class="text-gray-600">Fuld garanti på arbejde</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 relative z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    Vores Services
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-black mb-4">Vi Tilbyder <span class="gradient-text">Ekspert</span> Løsninger</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Som autoriseret kloakmester og bygningskonstruktør leverer vi professionelle løsninger til alle dine byggeprojekter</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kloakarbejde -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-xl border-t-4 border-primary-500">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M7 18C5.9 18 5 18.9 5 20S5.9 22 7 22 9 21.1 9 20 8.1 18 7 18M1 2V4H3L6.6 11.59L5.25 14.04C5.09 14.32 5 14.65 5 15C5 16.1 5.9 17 7 17H19V15H7.42C7.28 15 7.17 14.89 7.17 14.75L7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5.5C20.96 5.34 21 5.17 21 5C21 4.45 20.55 4 20 4H5.21L4.27 2H1M17 18C15.9 18 15 18.9 15 20S15.9 22 17 22 19 21.1 19 20 18.1 18 17 18M9 9.5H11V12.5L13.5 10L11 7.5V10.5H9V9.5Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-black mb-4 text-center">Kloakarbejde</h3>
+                    <p class="text-gray-600 mb-6 text-center">Autoriseret kloakmester med speciale i alle typer kloakløsninger</p>
+                    <ul class="text-gray-700 space-y-3">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Nyanlæg af kloak</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Kloakseparering</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>TV-inspektion</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Kloakreparationer</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bygningskonstruktion -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-xl border-t-4 border-primary-500">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 2V4H7V2H17M17 6V8H7V6H17M17 10V12H7V10H17M17 14V16H7V14H17M14 18V20H10V18H14M7 22V20H17V22H7M3 2L5 2V4H3V2M3 6H5V8H3V6M3 10H5V12H3V10M3 14H5V16H3V14M21 2H19V4H21V2M21 6V8H19V6H21M21 10V12H19V10H21M21 14V16H19V14H21Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-black mb-4 text-center">Bygningskonstruktion</h3>
+                    <p class="text-gray-600 mb-6 text-center">Professionel bygningskonstruktør med ekspertise i alle byggeprojekter</p>
+                    <ul class="text-gray-700 space-y-3">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Nybyggeri</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Tilbygninger</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Renoveringer</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Byggeteknisk rådgivning</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Entreprenørarbejde -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-xl border-t-4 border-primary-500">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 10H15V7H18M18 14H15V11H18M18 18H15V15H18M13 10H10V7H13M13 14H10V11H13M13 18H10V15H13M8 10H5V7H8M8 14H5V11H8M8 18H5V15H8M20 3H4C2.89 3 2 3.89 2 5V19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V5C22 3.89 21.11 3 20 3Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-black mb-4 text-center">Entreprenørarbejde</h3>
+                    <p class="text-gray-600 mb-6 text-center">Komplet entreprenørservice til alle typer anlægsprojekter</p>
+                    <ul class="text-gray-700 space-y-3">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Jordarbejde</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Belægning</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Nedbrydning</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Fundamenter</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Dræn og nedsivning -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-xl border-t-4 border-primary-500">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3.77L11.25 4.61C11.25 4.61 9.97 6.06 8.68 7.94C7.39 9.82 6 12.07 6 14.23A6 6 0 0 0 12 20.23A6 6 0 0 0 18 14.23C18 12.07 16.61 9.82 15.32 7.94C14.03 6.06 12.75 4.61 12.75 4.61L12 3.77M12 6.9C12.44 7.42 12.84 7.95 13.2 8.5C14.5 10.56 15.5 12.45 15.5 14.23C15.5 14.65 15.44 15.06 15.33 15.45L13.33 13.15L10.5 16.69L7.91 13.63L6 16V14.23C6 12.45 7.06 10.56 8.39 8.5C8.72 7.95 9.09 7.42 9.5 6.9L10.89 8.64L12 7.35L13.12 8.64L14.5 6.9L12 9.9Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-black mb-4 text-center">Dræn & Nedsivning</h3>
+                    <p class="text-gray-600 mb-6 text-center">Effektive løsninger til håndtering af overfladevand</p>
+                    <ul class="text-gray-700 space-y-3">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Omfangsdræn</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Nedsivningsanlæg</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Faskiner</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Regnvandshåndtering</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Betonarbejde -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-xl border-t-4 border-primary-500">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 3V5H5V3H9M13 3V7H11V3H13M15 3H19V5H15V3M9 7V11H5V7H9M13 9V11H11V9H13M15 7H19V11H15V7M9 13V15H5V13H9M13 13V17H11V13H13M15 13H19V15H15V13M9 17V21H5V17H9M15 17H19V21H15V17Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-black mb-4 text-center">Betonarbejde</h3>
+                    <p class="text-gray-600 mb-6 text-center">Støbning og betonløsninger til alle formål</p>
+                    <ul class="text-gray-700 space-y-3">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Fundamenter</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Gulvstøbning</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Støttemure</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 text-primary-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z"/>
+                            </svg>
+                            <span>Terrasser</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Call to Action Card -->
+                <div class="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-8 shadow-xl text-white flex flex-col justify-center items-center">
+                    <svg class="w-16 h-16 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                    </svg>
+                    <h3 class="text-2xl font-bold mb-4">Få Et Gratis Tilbud</h3>
+                    <p class="text-center mb-6">Vi giver altid uforpligtende tilbud på alle opgaver</p>
+                    <a href="tel:61702767" class="bg-white text-black hover:bg-primary-50 px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                        Ring 61 70 27 67
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projekter" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    Vores Projekter
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-black mb-4">Udførte <span class="gradient-text">Projekter</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Se eksempler på vores arbejde og kvaliteten vi leverer</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                    <div class="w-full h-80 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M7 18C5.9 18 5 18.9 5 20S5.9 22 7 22 9 21.1 9 20 8.1 18 7 18M1 2V4H3L6.6 11.59L5.25 14.04C5.09 14.32 5 14.65 5 15C5 16.1 5.9 17 7 17H19V15H7.42C7.28 15 7.17 14.89 7.17 14.75L7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5.5C20.96 5.34 21 5.17 21 5C21 4.45 20.55 4 20 4H5.21L4.27 2H1M17 18C15.9 18 15 18.9 15 20S15.9 22 17 22 19 21.1 19 20 18.1 18 17 18M9 9.5H11V12.5L13.5 10L11 7.5V10.5H9V9.5Z"/>
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Kloakseparering</h3>
+                            <p class="text-white/80">Komplet kloakseparering villa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                    <div class="w-full h-80 bg-gradient-to-br from-accent-100 to-accent-200 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-accent-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 12L12 2L2 12H4V20H20V12H22M12 5L18 11V18H6V11L12 5M8 14H10V17H8V14M12 14H14V17H12V14M16 14V17H14V14H16Z"/>
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Nybyggeri</h3>
+                            <p class="text-white/80">Enfamiliehus i Knebel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                    <div class="w-full h-80 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3.77L11.25 4.61C11.25 4.61 9.97 6.06 8.68 7.94C7.39 9.82 6 12.07 6 14.23A6 6 0 0 0 12 20.23A6 6 0 0 0 18 14.23C18 12.07 16.61 9.82 15.32 7.94C14.03 6.06 12.75 4.61 12.75 4.61L12 3.77Z"/>
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Nedsivningsanlæg</h3>
+                            <p class="text-white/80">LAR-løsning privat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                    <div class="w-full h-80 bg-gradient-to-br from-accent-100 to-accent-200 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-accent-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 3V5H5V3H9M13 3V7H11V3H13M15 3H19V5H15V3M9 7V11H5V7H9M13 9V11H11V9H13M15 7H19V11H15V7M9 13V15H5V13H9M13 13V17H11V13H13M15 13H19V15H15V13M9 17V21H5V17H9M15 17H19V21H15V17Z"/>
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Betonarbejde</h3>
+                            <p class="text-white/80">Støbning af fundament</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="om-os" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        Om Os
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-black mb-6">Din Lokale <span class="gradient-text">Byggeekspert</span> på Djursland</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Djursland Byggeteknik er din lokale entreprenør og autoriseret kloakmester i Knebel. Vi har specialiseret os i at levere professionelle løsninger inden for kloakarbejde, byggeri og entreprenørarbejde.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Som autoriseret kloakmester og bygningskonstruktør kan vi håndtere alle aspekter af dit byggeprojekt - fra planlægning til udførelse. Vi sætter en ære i at levere kvalitetsarbejde til tiden og til aftalt pris.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-3xl font-bold text-primary-600 mb-2">100%</h3>
+                            <p class="text-gray-600">Anbefalinger</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-3xl font-bold text-primary-600 mb-2">5★</h3>
+                            <p class="text-gray-600">Facebook Rating</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-3xl font-bold text-primary-600 mb-2">Aut.</h3>
+                            <p class="text-gray-600">Kloakmester</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-3xl font-bold text-primary-600 mb-2">24/7</h3>
+                            <p class="text-gray-600">Akut Service</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <a href="#kontakt" class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
+                            Få Et Tilbud
+                        </a>
+                        <a href="tel:61702767" class="border-2 border-primary-500 text-primary-600 hover:bg-primary-500 hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-300">
+                            Ring Nu
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-white rounded-2xl shadow-2xl p-8">
+                        <h3 class="text-2xl font-bold text-black mb-6">Hvorfor Vælge Os?</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2L2 7V10C2 16 6 21.5 12 23C18 21.5 22 16 22 10V7L12 2M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black mb-2">Autoriseret & Forsikret</h4>
+                                    <p class="text-gray-600">Vi er autoriseret kloakmester og fuldt forsikret, så du kan være tryg.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M12 3.18L19 6.3V11.22C19 15.54 16.24 19.65 12 20.82C7.76 19.65 5 15.54 5 11.22V6.3L12 3.18M12 7C10.34 7 9 8.34 9 10S10.34 13 12 13 15 11.66 15 10 13.66 7 12 7Z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black mb-2">Fuld Garanti</h4>
+                                    <p class="text-gray-600">Vi yder fuld garanti på alt vores arbejde og bruger kun kvalitetsmaterialer.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2M12 11.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5Z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black mb-2">Lokal Ekspertise</h4>
+                                    <p class="text-gray-600">Vi kender Djursland og er altid tæt på, når du har brug for os.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M7 2V4H8V18A4 4 0 0 0 12 22A4 4 0 0 0 16 18V4H17V2H7M11 16C10.4 16 10 15.6 10 15S10.4 14 11 14 12 14.4 12 15 11.6 16 11 16M13 12C12.4 12 12 11.6 12 11S12.4 10 13 10 14 10.4 14 11 13.6 12 13 12M14 7H10V4H14V7Z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black mb-2">Fast Pris</h4>
+                                    <p class="text-gray-600">Ingen overraskelser - vi holder altid den aftalte pris.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    Kontakt
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Få Et <span class="text-accent-500">Uforpligtende</span> Tilbud</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Kontakt os i dag for professionel rådgivning og et gratis tilbud på dit projekt</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Kontaktinformation</h3>
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Telefon</h4>
+                                <p class="text-accent-500 text-lg">61 70 27 67</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4M20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-accent-500 text-lg">djurslandbyggeteknik@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2M12 11.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Adresse</h4>
+                                <p class="text-gray-300">Møllevej 1<br>8420 Knebel</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2L2 7V10C2 16 6 21.5 12 23C18 21.5 22 16 22 10V7L12 2M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">CVR</h4>
+                                <p class="text-gray-300">34986827</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-xl p-6">
+                        <h4 class="font-bold mb-4">Service Områder</h4>
+                        <div class="text-gray-300">
+                            <p>Vi dækker hele Djursland inklusiv:</p>
+                            <p class="mt-2">Knebel • Ebeltoft • Grenaa • Rønde • Auning • Nimtofte • Kolind • Ryomgård</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <p class="text-sm text-accent-500">
+                                * Akut service tilgængelig 24/7
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-gray-900 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">Send Os En Besked</h3>
+                        <form action="https://formspree.io/f/xgorywrj" method="POST" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Navn *</label>
+                                <input type="text" name="navn" required class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Dit fulde navn">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Telefon *</label>
+                                <input type="tel" name="telefon" required class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Dit telefonnummer">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email *</label>
+                                <input type="email" name="email" required class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Din email">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Service</label>
+                                <select name="service" class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                    <option>Vælg service</option>
+                                    <option>Kloakarbejde</option>
+                                    <option>Bygningskonstruktion</option>
+                                    <option>Entreprenørarbejde</option>
+                                    <option>Dræn & Nedsivning</option>
+                                    <option>Betonarbejde</option>
+                                    <option>Andet</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Besked *</label>
+                                <textarea name="besked" required rows="4" class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="Beskriv dit projekt..."></textarea>
+                            </div>
+                            <input type="text" name="_gotcha" style="display:none">
+                            <input type="hidden" name="_next" value="#tak">
+                            <button type="submit" class="w-full bg-primary-500 hover:bg-primary-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                                Send Besked
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12L12 2L2 12H4V20H20V12H22M12 5L18 11V18H6V11L12 5Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold">Djursland Byggeteknik</h3>
+                    </div>
+                    <p class="text-gray-400">Autoriseret kloakmester og bygningskonstruktør på Djursland.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <div class="space-y-2">
+                        <a href="#services" class="block text-gray-400 hover:text-primary-400 transition-colors">Kloakarbejde</a>
+                        <a href="#services" class="block text-gray-400 hover:text-primary-400 transition-colors">Bygningskonstruktion</a>
+                        <a href="#services" class="block text-gray-400 hover:text-primary-400 transition-colors">Entreprenørarbejde</a>
+                        <a href="#services" class="block text-gray-400 hover:text-primary-400 transition-colors">Betonarbejde</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Hurtige Links</h3>
+                    <div class="space-y-2">
+                        <a href="#hjem" class="block text-gray-400 hover:text-primary-400 transition-colors">Hjem</a>
+                        <a href="#om-os" class="block text-gray-400 hover:text-primary-400 transition-colors">Om Os</a>
+                        <a href="#projekter" class="block text-gray-400 hover:text-primary-400 transition-colors">Projekter</a>
+                        <a href="#kontakt" class="block text-gray-400 hover:text-primary-400 transition-colors">Kontakt</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontakt</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p>Møllevej 1, 8420 Knebel</p>
+                        <p class="text-accent-500 font-medium">61 70 27 67</p>
+                        <p>djurslandbyggeteknik@gmail.com</p>
+                        <p>CVR: 34986827</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2026 Djursland Byggeteknik. Alle rettigheder forbeholdes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Success message after form submission
+        if (window.location.hash === '#tak') {
+            const successDiv = document.createElement('div');
+            successDiv.className = 'fixed top-20 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 font-bold';
+            successDiv.innerHTML = 'Tak for din henvendelse! Vi kontakter dig snarest.';
+            document.body.appendChild(successDiv);
+
+            setTimeout(() => {
+                successDiv.remove();
+                history.replaceState(null, null, ' ');
+            }, 5000);
+        }
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-gradient');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.md\\:hidden button');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                console.log('Mobile menu clicked');
+            });
+        }
+    </script>
+</body>
+</html>
